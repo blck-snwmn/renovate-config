@@ -1,0 +1,21 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:best-practices",
+    ":automergePatch",
+    ":enableVulnerabilityAlertsWithLabel(security)"
+  ],
+  "timezone": "Asia/Tokyo",
+  "schedule": ["after 10pm on sunday"],
+  "prConcurrentLimit": 3,
+  "branchConcurrentLimit": 5,
+  "labels": ["dependencies"],
+  "minimumReleaseAge": "14 days",
+  "vulnerabilityAlerts": {
+    "schedule": [],
+    "prCreation": "immediate"
+  },
+  "lockFileMaintenance": {
+    "schedule": ["before 6am on monday"]
+  }
+}
