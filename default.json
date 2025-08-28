@@ -17,5 +17,6 @@
   },
   "lockFileMaintenance": {
     "schedule": ["before 6am on monday"]
-  }
+  },
+  "assignees": ["blck-snwmn"]
 }
