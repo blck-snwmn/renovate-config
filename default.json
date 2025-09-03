@@ -19,5 +19,18 @@
     "schedule": ["before 6am on monday"]
   },
   "assignees": ["blck-snwmn"],
-  "postUpdateOptions": ["gomodTidy", "gomodUpdateImportPaths"]
+  "packageRules": [
+    {
+      "matchManagers": ["gomod"],
+      "postUpdateOptions": ["gomodTidy", "gomodUpdateImportPaths"]
+    },
+    {
+      "matchManagers": ["npm"],
+      "postUpdateOptions": ["npmDedupe"]
+    },
+    {
+      "matchManagers": ["pnpm"],
+      "postUpdateOptions": ["pnpmDedupe"]
+    }
+  ]
 }
