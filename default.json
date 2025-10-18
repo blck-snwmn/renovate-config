@@ -14,7 +14,8 @@
   "minimumReleaseAge": "14 days",
   "vulnerabilityAlerts": {
     "schedule": [],
-    "prCreation": "immediate"
+    "prCreation": "immediate",
+    "assignees": ["blck-snwmn"]
   },
   "lockFileMaintenance": {
     "schedule": ["before 6am on monday"]
