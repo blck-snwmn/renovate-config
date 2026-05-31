@@ -7,11 +7,10 @@
     "github>aquaproj/aqua-renovate-config#2.9.0"
   ],
   "timezone": "Asia/Tokyo",
-  "schedule": ["after 10pm on sunday"],
   "prConcurrentLimit": 3,
   "branchConcurrentLimit": 5,
   "labels": ["dependencies"],
-  "minimumReleaseAge": "14 days",
+  "minimumReleaseAge": "7 days",
   "vulnerabilityAlerts": {
     "schedule": [],
     "prCreation": "immediate",
