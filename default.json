@@ -3,6 +3,7 @@
   "extends": [
     "config:best-practices",
     ":maintainLockFilesDisabled",
+    ":pinAllExceptPeerDependencies",
     ":automergePatch",
     ":enableVulnerabilityAlertsWithLabel(security)",
     "github>aquaproj/aqua-renovate-config#2.9.0"
