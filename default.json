@@ -2,6 +2,7 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:best-practices",
+    ":maintainLockFilesDisabled",
     ":automergePatch",
     ":enableVulnerabilityAlertsWithLabel(security)",
     "github>aquaproj/aqua-renovate-config#2.9.0"
@@ -15,9 +16,6 @@
     "schedule": [],
     "prCreation": "immediate",
     "assignees": ["blck-snwmn"]
-  },
-  "lockFileMaintenance": {
-    "schedule": ["before 6am on monday"]
   },
   "assignees": ["blck-snwmn"],
   "packageRules": [
