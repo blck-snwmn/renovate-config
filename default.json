@@ -31,10 +31,6 @@
     {
       "matchManagers": ["pnpm"],
       "postUpdateOptions": ["pnpmDedupe"]
-    },
-    {
-      "matchManagers": ["bun"],
-      "postUpdateOptions": ["bunDedupe"]
     }
   ]
 }
