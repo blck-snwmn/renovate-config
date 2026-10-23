@@ -33,8 +33,44 @@
       "postUpdateOptions": ["pnpmDedupe"]
     },
     {
-      "matchManagers": ["bun"],
-      "postUpdateOptions": ["bunDedupe"]
+      "description": "Automerge minor updates of tools managed by aqua",
+      "matchFileNames": [
+        "**/aqua.yaml",
+        "**/aqua.yml",
+        "**/.aqua.yaml",
+        "**/.aqua.yml"
+      ],
+      "matchUpdateTypes": ["minor"],
+      "automerge": true
+    },
+    {
+      "description": "Automerge minor updates of aqua itself",
+      "matchDepNames": ["aquaproj/aqua", "aqua"],
+      "matchUpdateTypes": ["minor"],
+      "automerge": true
+    },
+    {
+      "description": "Automerge minor updates of GitHub Actions (excluding runtime versions passed via with:)",
+      "matchManagers": ["github-actions"],
+      "matchDepTypes": ["action"],
+      "matchUpdateTypes": ["minor"],
+      "automerge": true
+    },
+    {
+      "description": "Automerge minor updates of linters, formatters, type definitions and package managers",
+      "matchPackageNames": [
+        "oxlint",
+        "oxfmt",
+        "oxlint-tsgolint",
+        "ruff",
+        "pnpm",
+        "@types/**",
+        "bun-types",
+        "chrome-types",
+        "webmcp-types"
+      ],
+      "matchUpdateTypes": ["minor"],
+      "automerge": true
     }
   ]
 }
