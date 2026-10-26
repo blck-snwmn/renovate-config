@@ -71,6 +71,18 @@
       ],
       "matchUpdateTypes": ["minor"],
       "automerge": true
+    },
+    {
+      "description": "Keep requires-python as a range, the same way engines is handled",
+      "matchDepTypes": ["requires-python"],
+      "rangeStrategy": "auto"
+    },
+    {
+      "description": "Look up exact .python-version pins from python.org so they move with requires-python and uv",
+      "matchManagers": ["pyenv"],
+      "matchDepNames": ["python"],
+      "matchCurrentValue": "/^\\d+\\.\\d+\\.\\d+$/",
+      "overrideDatasource": "python-version"
     }
   ]
 }
