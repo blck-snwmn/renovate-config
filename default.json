@@ -83,6 +83,12 @@
       "matchDepNames": ["python"],
       "matchCurrentValue": "/^\\d+\\.\\d+\\.\\d+$/",
       "overrideDatasource": "python-version"
+    },
+    {
+      "description": "Hold npm updates for 7 days, overriding the 3 days set by config:best-practices",
+      "matchDatasources": ["npm"],
+      "matchUpdateTypes": ["major", "minor", "patch"],
+      "minimumReleaseAge": "7 days"
     }
   ]
 }
